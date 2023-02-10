@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "900364498637",
+    "project_id": "myshop-80cea",
+    "storage_bucket": "myshop-80cea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900364498637:android:8b22dbd85fd5450b461b84",
+        "android_client_info": {
+          "package_name": "com.tanvi.myshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900364498637-9nivdn3j5mgb5achgnf6gr72vnqdl2m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwpbsmkKKdGOecjuy8wOJnMq4KX7ok0uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900364498637-9nivdn3j5mgb5achgnf6gr72vnqdl2m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
