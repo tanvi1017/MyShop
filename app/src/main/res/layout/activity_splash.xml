@@ -4,15 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img"
     tools:context=".SplashActivity">
-<com.tanvi.myshop.utils.MSPTextViewbold
-    android:id="@+id/tv_app_name"
-    android:text="MyShop"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    <FrameLayout
+       android:layout_marginLeft=""
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/login_background"/>
+
+            <TextView
+                android:id="@+id/tvMyShop"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="My Shop"
+                android:textColor="#ffff"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                android:layout_marginTop="200dp"
+                android:layout_marginLeft="110"/>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
