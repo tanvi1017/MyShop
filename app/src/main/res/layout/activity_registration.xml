@@ -12,6 +12,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_ios_24"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,9 +78,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout1">
         <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_terms_and_conditions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
+            android:id="@+id/tv_terms_and_conditions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I Agree To The Terms And Conditions"
@@ -93,6 +102,7 @@
             android:layout_height="60dp"
             android:src="@drawable/button_background" />
         <TextView
+            android:id="@+id/tvRegistration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registration"
@@ -116,6 +126,7 @@
             android:text="Already have an account?"
             android:textColor="#090909"/>
         <TextView
+            android:id="@+id/tv_Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
