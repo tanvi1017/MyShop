@@ -7,16 +7,16 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.EditText
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.widget.AppCompatCheckBox
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.ktx.Firebase
+import com.tanvi.myshop.firestore.FirestoreClass
+import com.tanvi.myshop.models.User
 
 class RegistrationActivity : BaseActivity() {
     lateinit var Login: TextView
@@ -60,6 +60,7 @@ class RegistrationActivity : BaseActivity() {
         frame2.setOnClickListener {
             validateRegisterDetails()
         }
+        registerUser()
     }
 
     private fun validateRegisterDetails(): Boolean {
@@ -104,21 +105,29 @@ class RegistrationActivity : BaseActivity() {
             val email:String = etEmail.text.toString().trim { it <= ' ' }
             val password:String=etPassword.text.toString().trim { it <= ' ' }
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password).addOnCompleteListener(
-                onCompleteListener <AuthResult> { task ->
-                    hideProgressDialog()
+                OnCompleteListener <AuthResult> { task ->
+                  //  hideProgressDialog()
                     if (task.isSuccessful) {
                         val firebaseUser: FirebaseUser = task.result!!.user!!
-                        showErrorSnackBar(
-                            "you are registered successfully.your user id is ${firebaseUser.uid}",
-                            false
+                        val user= User(
+                            firebaseUser.uid,
+                            etfirstName.text.toString().trim { it <= ' ' },
+                            etlastName.text.toString().trim { it <= ' ' },
+                            etEmail.text.toString().trim { it <= ' ' }
                         )
-                        FirebaseAuth.getInstance().signOut();
-                        finish()
+                       FirestoreClass().registerUser(this@RegistrationActivity,user)
+                        //FirebaseAuth.getInstance().signOut();
+                       // finish()
                     } else {
+                        hideProgressDialog()
                         showErrorSnackBar(task.exception!!.message.toString(), true)
                     }
 
                 })
         }
+    }
+    private fun userRegistrationSuccess(){
+        hideProgressDialog()
+        Toast.makeText(this@RegistrationActivity,"You login successfully",Toast.LENGTH_LONG).show()
     }
  }

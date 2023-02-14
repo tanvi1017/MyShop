@@ -12,7 +12,7 @@ import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 
-class LoginActivity :AppCompatActivity(),View.OnClickListener {
+class LoginActivity : BaseActivity(),View.OnClickListener {
     lateinit var tvRegister:TextView
     lateinit var tvForgotpassword:TextView
     lateinit var etEmail:EditText

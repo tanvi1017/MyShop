@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1255" />
         <entry key="app/src/main/res/drawable/login_background.xml" value="0.1255" />
         <entry key="app/src/main/res/layout/activity_base.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_firestore.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10916919959473151" />
