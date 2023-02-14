@@ -55,8 +55,7 @@ class RegistrationActivity : BaseActivity() {
             startActivity(intent)
         }
         backImage.setOnClickListener {
-            val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
-            startActivity(intent)
+       onBackPressed()
         }
         frame2.setOnClickListener {
             validateRegisterDetails()
@@ -118,7 +117,8 @@ class RegistrationActivity : BaseActivity() {
                     } else {
                         showErrorSnackBar(task.exception!!.message.toString(), true)
                     }
+
                 })
         }
     }
-}
+ }

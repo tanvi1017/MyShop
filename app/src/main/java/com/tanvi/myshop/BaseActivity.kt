@@ -26,7 +26,7 @@ open class BaseActivity : AppCompatActivity() {
         mProgressDialog.setContentView(R.layout.activity_progress_dialog)
         mProgressDialog.tv_progress_text.text =text
         mProgressDialog.setCancelable(false)
-        mProgressDialog.setCanceledTouchOutside(false)
+        mProgressDialog.setCanceledOnTouchOutside(false)
         mProgressDialog.show()
     }
     fun hideProgressDialog(){
