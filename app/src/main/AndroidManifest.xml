@@ -17,9 +17,6 @@
             android:name=".UserProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".firestore"
-            android:exported="false" />
-        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity

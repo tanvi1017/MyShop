@@ -15,5 +15,13 @@
     <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
     <string name="registry_successful">Thanks for registering!</string>
     <string name="please_wait">Please Wait&#8230;</string>
+    <string name="title_forgot_password">FORGOT PASSWORD?</string>
+    <string name= "forgot_password_title_description">Enter your username and e-mail and pasword</string>
+    <string name="register_success">You are registered successfully.</string>
+    <string name="title_complete_profile">PROFILE</string>
+    <string name="et_hint_mobile_number">Mobile Number</string>
+    <string name="rb_lb1_male">MALE</string>
+    <string name="rb_lb1_female">FEMALE</string>
+    <string name="btn_lb1_save">Save</string>
 
 </resources>
