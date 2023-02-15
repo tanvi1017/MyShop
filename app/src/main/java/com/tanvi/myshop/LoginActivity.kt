@@ -5,12 +5,16 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
+import android.util.Log.e
+import android.util.Log.i
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
+import com.tanvi.myshop.models.User
 
 class LoginActivity : BaseActivity(),View.OnClickListener {
     lateinit var tvRegister:TextView
@@ -18,10 +22,10 @@ class LoginActivity : BaseActivity(),View.OnClickListener {
     lateinit var etEmail:EditText
     lateinit var etPassword:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
-        tvRegister=findViewById(R.id.tvRegister)
-        tvForgotpassword=findViewById(R.id.tvForgotpassword)
-        etEmail=findViewById(R.id.etEmail)
-        etPassword=findViewById(R.id.etPassword)
+        tvRegister = findViewById(R.id.tvRegister)
+        tvForgotpassword = findViewById(R.id.tvForgotpassword)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -35,6 +39,15 @@ class LoginActivity : BaseActivity(),View.OnClickListener {
             )
         }
     }
+        fun userLoggedInSuccess(user: User){
+            Log.i("First Name",user.firstName)
+            Log.i("LastName",user.lastName)
+            Log.i("Email",user.email)
+            startActivity(Intent(this@LoginActivity,MainActivity::class.java))
+            finish()
+
+        }
+
      override fun onClick(view: View?) {
         if (view != null) {
             when (view.id) {
@@ -81,6 +94,7 @@ class LoginActivity : BaseActivity(),View.OnClickListener {
                          showErrorSnackBar("You are logged in successfully.",false)
                      }
                      else{
+                         hideProgressDialog()
                          showErrorSnackBar(task.exception!!.message.toString(),true)
                      }
              }
