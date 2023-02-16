@@ -6,6 +6,8 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1255" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.1255" />
+        <entry key="app/src/main/res/drawable/drawable_gender_tab_text_color_selector.xml" value="0.1255" />
+        <entry key="app/src/main/res/drawable/drwable_gender_tab.xml" value="0.1255" />
         <entry key="app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.1255" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1255" />
         <entry key="app/src/main/res/drawable/login_background.xml" value="0.1255" />
