@@ -25,7 +25,7 @@ import com.google.android.material.snackbar.Snackbar
     fun showProgressDialog(text:String){
         mProgressDialog = Dialog(this)
         mProgressDialog.setContentView(R.layout.activity_progress_dialog)
-       mProgressDialog.tv_progress_text.text =text
+      // mProgressDialog.tv_progress_text.text =text
         mProgressDialog.setCancelable(false)
         mProgressDialog.setCanceledOnTouchOutside(false)
         mProgressDialog.show()

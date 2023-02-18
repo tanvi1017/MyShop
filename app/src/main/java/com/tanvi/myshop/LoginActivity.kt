@@ -15,6 +15,7 @@ import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.tanvi.myshop.models.User
+import com.tanvi.myshop.utils.Constants
 
 class LoginActivity : BaseActivity(),View.OnClickListener {
     lateinit var tvRegister:TextView
@@ -46,6 +47,7 @@ class LoginActivity : BaseActivity(),View.OnClickListener {
             Log.i("Email",user.email)
             if (user.profileCompleted==0){
                 val intent=Intent(this@LoginActivity,UserProfileActivity::class.java)
+                intent.putExtra(Constants.EXTRA_USER_DETAILS,user)
                 startActivity(intent)
             }
             else {
@@ -106,5 +108,6 @@ class LoginActivity : BaseActivity(),View.OnClickListener {
              }
          }
      }
+
         }
 

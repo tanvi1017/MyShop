@@ -23,5 +23,6 @@
     <string name="rb_lb1_male">MALE</string>
     <string name="rb_lb1_female">FEMALE</string>
     <string name="btn_lb1_save">Save</string>
+    <string name="read_storage_permission_denied">Oops,you just denied the permission for storage.you can also allow it from settings.</string>
 
 </resources>
