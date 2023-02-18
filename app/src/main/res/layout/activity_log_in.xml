@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_vector_dark"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/shop_logo" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:elevation="@dimen/_6sdp"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="32dp"
+                android:paddingRight="24dp">
+
+
+                <!--  Email Label -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--  Password Label -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="12dp"
+                    android:text="Login"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="Forgot password?"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/link_signup"
+                    style="@style/TradzHubThemeFont"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="No account yet? Create one"
+
+                    android:textSize="18dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/orText"
+                        android:background="@color/lightgray" />
+
+                    <TextView
+                        android:id="@+id/orText"
+                        style="@style/TradzHubThemeFont"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+
+                        android:text="OR" />
+
+                    <View
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/orText"
+                        android:background="@color/lightgray" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentBottom="true"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:elevation="@dimen/_1sdp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="@dimen/_2sdp"
+                            app:cardElevation="@dimen/_2sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorAccent"
+                                android:gravity="center_vertical"
+
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_32sdp"
+                                    android:layout_height="@dimen/_32sdp"
+                                    android:src="@drawable/smallgoogle_icon" />
+
+                                <TextView
+                                    style="@style/TradzHubThemeFont"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_marginLeft="@dimen/_2sdp"
+                                    android:gravity="center"
+                                    android:text="Login with Google"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:elevation="@dimen/_2sdp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="@dimen/_2sdp"
+                            app:cardElevation="@dimen/_2sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#3b5998"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+
+                                android:weightSum="2">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_height="@dimen/_24sdp"
+                                    android:src="@drawable/fb_icon" />
+
+                                <TextView
+                                    style="@style/TradzHubThemeFont"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_marginLeft="@dimen/_2sdp"
+                                    android:gravity="center"
+
+                                    android:text="Login with Google"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
